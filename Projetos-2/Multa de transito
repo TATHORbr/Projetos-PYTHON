@@ -1,0 +1,29 @@
+'''MULTA DE TRANSITO'''
+import random
+
+velocidadeA = 60
+velocidade = random.randint(60, 120)
+print(f'A velocidade atual {velocidade}Km/h.')
+
+if velocidade >= (velocidadeA * 1.7):
+    print('\033[32m$\033[m-'*26)
+    print('Sua velocidade esta superior ao permitido de 80km/h')
+    multa = (velocidade-60)*7
+    print('Sua multa será de \033[32mR${}\033[m e serão 7 PONTOS.'.format(multa))
+
+elif velocidade >= (velocidadeA * 1.5):
+    print('\033[32m$\033[m-'*26)
+    print('Sua velocidade esta superior ao permitido de 80km/h')
+    multa = (velocidade-60)*7
+    print('Sua multa será de \033[32mR${}\033[m e serão 5 PONTOS.'.format(multa))
+
+elif velocidade >= (velocidadeA * 1.2):
+    print('\033[32m$\033[m-'*26)
+    print('Sua velocidade esta superior ao permitido de 80km/h')
+    multa = (velocidade-60)*7
+    print('Sua multa será de \033[32mR${}\033[m e serão 4 PONTOS.'.format(multa))
+
+else:
+    print('*'*40)
+    print('Sua velocidade esta otima! ')
+print('Tenha um bom dia! Dirija com segurança')
