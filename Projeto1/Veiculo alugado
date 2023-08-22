@@ -1,0 +1,12 @@
+'''Exercicios para calcular o pagamento de um aluguel de carro'''
+print('='*40)
+print('LOCAÇÃO DE CARROS')
+
+print('='*40)
+print('Vamos as informações')
+
+dal = int(input('Quantos dias foram utilizados o carro: '))
+qkm = float(input('Quantos km foram rodados: '))
+pago = (dal*60)+(qkm*0.15)
+
+print(f'O total a pagar é de R$ {pago}')
