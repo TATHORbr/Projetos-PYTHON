@@ -1,0 +1,39 @@
+'''Fazendo a media de notas'''
+
+print('Resumo do semestre')
+
+nome = input('Nome do aluno: ').strip().capitalize()
+n1 = float(input('Digite a primeira nota: '))
+t1 = float(input('Digite a nota do trabalho: '))
+r1 = (n1 * 0.8) + (t1 * 0.2)
+
+n2 = float(input('Digite a segunda nota: '))
+t2 = float(input('Digite a nota do trabalho: '))
+r2 = (n2 * 0.8) + (t2 * 0.2)
+
+m1 =((r1+r2)/2)
+
+print(f'{nome} sua primeira nota \033[36m{r1:.2f}\033[m e a segunda nota \033[36m{r2:.2f}\033[m \n Sua a média é \033[36m{m1:.2f}\033[m')
+print('='*40)
+
+if m1 == 10:
+    print('\033[36mAPROVADO\033[m, perfeito, continue com excelencia.')
+
+elif m1 >= 6.5:
+    print('\033[36mAPROVADO\033[m, parabens continue com sua dedicação.')
+
+elif 2 < m1 <= 6.49:
+    print('\033[33mEXAME\033[m, será necessario realizar mais uma prova.')
+    print('=' * 40)
+    n3 = float(input('Nota do exame: '))
+    mf = (m1 + n3)/2
+    print(f'Sua nota com exame foi para \033[36m{mf:.2f}\033[m')
+    if mf >= 5.5:
+        print('\033[36mAPROVADO\033[m, melhor se dedicar mais no proximo semestre.')
+    else:
+        print('\033[31mREPROVADO\033[m, consulte com seu professor ou secretaria \numa revisão ou instruções para o proximo semestre.')
+
+else:
+    print('\033[31mREPROVADO\033[m ... refaça a materia no proximo semestre.!')
+print('='*40)
+print(f'Nos vemos no proximo semestre {nome}, \npara continuar com seu aprendizado.')
