@@ -1,0 +1,17 @@
+print('\033[36mVamos realizar alguns calculos agora !\033[m')
+n1 = int(input('Digite um valor: '))
+n2 = int(input('Digite um valor para somar: '))
+s = (n1 + n2)
+print('='*40)
+print('A operação entre \033[32m{}\033[m + \033[32m{}\033[m = \033[35m{}\033[m'.format(n1, n2, s))
+print('='*40)
+n3 = int(input('Digite um valor para subtrair: '))
+m = s - n3
+print('='*40)
+print('A operação entre \033[35m{}\033[m - \033[35m{}\033[m = \033[36m{}\033[m'.format(s, n3, m))
+print('='*40)
+n4 = int(input('Vamos multiplica-lo: '))
+print('='*40)
+multi = m * n4
+print('A operação entre \033[36m{}\033[m x \033[36m{}\033[m = \033[33m{}\033[m'.format(m, n4, multi))
+print('='*40)
