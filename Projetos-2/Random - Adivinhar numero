@@ -1,0 +1,14 @@
+'''fazer o computador escolher um numero aleatorio e tentar adivinhar'''
+
+import random
+
+computador = random.randint(0, 5)
+print('>' * 20)
+print('Adivinhe o numero que estou pensando entre 0 e 5')
+jogador = int(input('Digite o numero: '))
+print('Processando ...')
+if jogador == computador:
+    print('PARABÉNS, você conseguiu acertar')
+else:
+    print('ERROU, era {} e voce disse {} tentei outra vez'.format(computador, jogador))
+print('Vamos outra vez.')
