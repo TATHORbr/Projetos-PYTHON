@@ -1,0 +1,26 @@
+'''formas de pagamento, simulação'''
+
+nomecliente = str(input('Qual o nome do cliente? ')).strip().capitalize()
+print('='*40)
+valor = int(input('Qual o valor da compra realizada R$ '))
+print('='*40)
+pagamento= int(input('Em quantas vezes sera o pagamento? '))
+
+if pagamento == 1:
+    avista = (valor - (valor*0.05))
+    print('Avista o valor terá desconto de 5% então será R$ {:.2f}'.format(avista))
+    print('=' * 40)
+
+elif pagamento <= 3:
+    ppx = valor/pagamento
+    print(f'O valor parcelado sera de {ppx:.2f}')
+    print('O valor parcelado em até 3x Não possui juros.')
+    print('=' * 40)
+
+else:
+    parcelado = (valor +((valor*0.025)*pagamento))
+    pp = parcelado/pagamento
+    print('Parcelado o valor da compra será R$ {:.2f} com parcelar de R$ {:.2f}'.format(parcelado, pp))
+    print('=' * 40)
+
+print(f'Obrigado {nomecliente} por nos escolher, volte sempre.')
