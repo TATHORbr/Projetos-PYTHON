@@ -1,0 +1,11 @@
+'''Quanto de tinta ira usar para pintar'''
+print('Quanto de tinta iremos usar.')
+print('='*40)
+alt = float(input('Digite a Altura da sua parede: '))
+comp = float(input('Digite a largura da sua parede: '))
+print('='*40)
+m2 = alt * comp
+mr = m2 / 2
+
+print(f'Voce possui {m2}m2 para ser pintado,')
+print(f'Então serão necessarios {mr} litros de tinta.')
