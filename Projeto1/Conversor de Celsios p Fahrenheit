@@ -1,0 +1,19 @@
+'''exercicio para transformação de C em F'''
+
+print('='*40)
+print('Vamo verificar as temperaturas')
+print('='*40)
+
+tempc = float(input('Digite a temperatudo em Celsius: '))
+tempf = ((9 * tempc) / 5) + 32
+print(f'A temperatudo de {tempc}C corresponde a {tempf}F')
+print('*'*40)
+if tempc <= 15:
+    print('Hoje está um dia frio tome cuidado !')
+    print('Prepara o caldinho e a coberta.')
+
+elif tempc <= 30:
+    print('Hoje ta gostosinho !')
+    print('Chame seus amigos para tomar uma.')
+else:
+    print('Certeza que tem dois sol no céu, confere ai tem coisa errada.')
