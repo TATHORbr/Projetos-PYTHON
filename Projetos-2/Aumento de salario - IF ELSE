@@ -1,0 +1,13 @@
+'''calculo de aumento de salarios diferentes'''
+
+salario = float(input("Valor do salario: "))
+
+if salario >= 1320.00:
+    aumento = (salario*0.10) + salario
+    print(f'Com o aumento de 10% seu salario sera: {aumento}')
+
+else:
+    aumento = (salario*0.15) + salario
+    print(f'Com o aumento de 15% seu salrio sera: `{aumento}')
+
+print('Parabéns pelo seu aumento continue se dedicando.')
