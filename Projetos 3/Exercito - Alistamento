@@ -1,0 +1,22 @@
+print('Bem vindo! Vamos fazer seu alistamneto.')
+print('Primeiro irei precisar de alguns dados')
+
+nome = str(input('Qual o seu nome? ')).strip().upper()
+ano = int(input(f'{nome} o ano do seu nascimento? '))
+alista = 2022 - ano
+data = (18 - alista) + 2023
+datam = 2023 - (alista - 18)
+
+if alista < 18:
+    print('\033[33m*\033[m'*40)
+    print('Voce ainda não esta no periodo de alistamento')
+    print('Volte em janeiro de {}'.format(data))
+
+elif alista == 18:
+    print('\033[32m*\033[m' * 40)
+    print('Hora do seu alistamento !')
+
+elif alista > 18:
+    print('\033[31m*\033[m' * 40)
+    print('Passou seu prazo de alistamento!')
+    print('Seu alistamento deveria ter sido realidade em {}'.format(datam))
