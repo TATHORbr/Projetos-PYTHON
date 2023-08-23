@@ -1,0 +1,22 @@
+from datetime import date
+
+atual = date.today().year
+totmaior = 0
+totmenor = 0
+print('Vamos verificar alguns dados.')
+
+for pessoa in range(1, 8):
+    ano = int(input('Em que ano a {}o pessoa nasceu? '.format(pessoa)))
+    idade = atual - ano
+    if idade >= 21:
+        totmaior += 1
+    else:
+        totmenor += 1
+
+print('\033[35m*\033[m'*40)
+print('Ao todo tivermos {} maiores e menores tivermos {}.'.format(totmaior, totmenor))
+
+if totmaior > totmenor:
+    print('\033[31mA velharada ta dominando !\033[m')
+else:
+    print('\033[36mQue cheiro de fralda e leite ninho !\033[m')
