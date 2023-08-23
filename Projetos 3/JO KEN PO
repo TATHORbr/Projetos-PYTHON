@@ -1,0 +1,43 @@
+from random import randint
+from time import sleep
+itens = ('Pedra','Papel','Tesoura')
+computador = randint(0, 2)
+print('''Escolha entra:
+[0] Pedra
+[1] Papel
+[2] Tesoura''')
+jogador = int(input('Qual a sua jogada? '))
+print('*'*40)
+print('\033[34mJO\033[m')
+sleep(1)
+print('\033[35mKEN\033[m')
+sleep(1)
+print('\033[36mPOOO !!\033[m')
+sleep(1)
+print('*'*40)
+print('O computador escolheu {}'.format(itens[computador]))
+print('Voce escolheu {}'.format(itens[jogador]))
+print('*'*40)
+if computador == 0:
+    if jogador == 0:
+        print('\033[33mEMPATOU\033[m')
+    elif jogador == 1:
+        print('Jogador \033[32mVENCEU\033[m')
+    elif jogador == 2:
+        print('Jogador \033[31mPERDEU\033[m')
+elif computador == 1:
+    if jogador == 0:
+        print('Jogador \033[31mPERDEU\033[m')
+    elif jogador == 1:
+        print('\033[33mEMPATOU\033[m')
+    elif jogador == 2:
+        print('Jogador \033[32mVENCEU\033[m')
+elif computador == 2:
+    if jogador == 0:
+        print('Jogador \033[32mVENCEU\033[m')
+    elif jogador == 1:
+        print('Jogador \033[31mPERDEU\033[m')
+    elif jogador == 2:
+        print('\033[33mEMPATOU\033[m')
+else:
+    print('Opção INVALIDA')
