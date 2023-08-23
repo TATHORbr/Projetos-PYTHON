@@ -1,0 +1,29 @@
+from time import sleep
+
+print('Vamos fazer uma contagem ...')
+
+i = int(input('Digite o inicio: '))
+f = int(input('Digite o fim: '))
+p = int(input('Digite o passo: '))
+
+for c in range(i, f+1, p):
+    print(c)
+print('Fim da contagem.')
+
+print('*'*40)
+
+for c in range (0, 2):
+    print('To analisando calma')
+    sleep(2)
+    print('acho que ta tudo certo')
+print('tudo certo, vamos o proximo')
+
+print('*'*40)
+
+print('Vamos fazer uma somatoria agora.')
+
+s = 0
+for c in range(0 ,3):
+    n = int(input('Digite um valor: '))
+    s += n
+print('A somatoria desses numeros {}'.format(s))
