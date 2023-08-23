@@ -1,0 +1,32 @@
+print('Vamos verificar o pagamento.')
+print('\033[36m*\033[m'*40)
+
+valor = float(input('Qual é o valor da compra? '))
+print('\033[36m*\033[m'*40)
+
+print('''Qual sera o metodo de pagamento:
+[1] Débito - 10% de desconto
+[2] Crédito à vista - 5% de desconto
+[3] Parcelado 2x
+[4] 3x ou mais - 20% juros''')
+pagamento = int(input('Escolha uma forma de pagamento: '))
+print('\033[36m*\033[m'*40)
+
+if pagamento == 1:
+    compra = valor - (valor*0.10)
+    print('Valor a pagar \033[33mR$ {:.2f}\033[m'.format(compra))
+elif pagamento == 2:
+    compra2 = valor - (valor*0.05)
+    print('Valor a pagar \033[33mR$ {:.2f}\033[m'.format(compra2))
+elif pagamento == 3:
+    compra3 = valor / 2
+    print('Sua compra ficou parcelas de 2x  de \033[33mR$ {:.2f}\033[m'.format(compra3))
+elif pagamento == 4:
+    vezes = int(input('Quantas parcelas será a compra ? '))
+    compra4 = (valor + (valor * 0.20)) / vezes
+    nvalor = valor + (valor * 0.20)
+    print('Valor de cada parcela sera {}x \033[33mR$ {:.2f}\033[m e o total da compra \033[33mR$ {:.2f}\033[m.'.format(vezes ,compra4 ,nvalor))
+else:
+    print('\033[31mEscolha algumas das formas de pagamento!\033[m')
+print('\033[36m*\033[m'*40)
+print('Obrigado por nos escolher, VOLTE SEMPRE !')
