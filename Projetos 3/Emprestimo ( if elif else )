@@ -1,0 +1,23 @@
+print('Olá, Bem vindo a \033[32mEMPRE.MONEY\033[m')
+
+nome = str(input('Qual é o seu nome? ')).strip().upper()
+renda = int(input('{} qual é a sua renda mensal? '.format(nome)))
+valor = int(input('Valor do imovel desejado? '))
+parcelas = int(input('Parcelamento em quantos anos? '))
+
+print('\033[33m*\033[m'*40)
+VP = valor / (parcelas * 12)
+print('\033[36m{}\033[m na simulação seria valor de R$ \033[33m{:.2f}\033[m no periodo de \033[33m{}\033[m anos.'.format(nome, VP, parcelas))
+print('\033[33m*\033[m'*40)
+VG = renda * 0.30
+
+if VP <= VG:
+    print('\033[33mPARABENS {}!\033[m'.format(nome))
+    print('Seu emprestimo foi \033[32mAPROVADO\033[m')
+
+elif VP > renda:
+    print('\033[34mIMPOSSIVEL\033[m O valor da parcela do seu emprestimo\né superior ao seu salario')
+
+else:
+    print('Emprestimo \033[31mNEGADO\033[m, o valor precisa ser apenas 30% da sua renda.')
+    print('Suas parcelas podem ser no máximo \033[33m{:.2f}\033[m'.format(VG))
