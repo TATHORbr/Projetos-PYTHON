@@ -1,0 +1,19 @@
+from datetime import date
+
+atual = date.today().year
+nascimento = int(input('Ano em que nasceu? '))
+print('*'*40)
+
+idade = atual - nascimento
+
+print(f'O atleta tem {idade} anos.')
+if idade <= 9:
+    print('Sua categoria é \033[32mMIRIM\033[m')
+elif idade <= 14:
+    print('Sua categoria é \033[32mINFANTIL\033[m')
+elif idade <= 19:
+    print('Sua categoria é \033[32mJUNIOR\033[m')
+elif idade <= 25:
+    print('Sua categoria é \033[32mSENIOR\033[m')
+elif idade >= 26:
+    print('Sua categoria é \033[32mMASTER\033[m')
