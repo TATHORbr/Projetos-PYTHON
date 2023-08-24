@@ -1,0 +1,29 @@
+print('='*40)
+print('{:^40}'.format('\033[33mBANCO MILLION\033[m'))
+print('='*40)
+saque = int(input('Quanto voce quer sacar? \033[32mR$\033[m '))
+total = saque
+nota = 50
+totnota = 0
+while True:
+    if total >= nota:
+        total -= nota
+        totnota += 1
+    else:
+        if totnota > 0:
+            print(f'Total de \033[33m{totnota}\033[m notas de \033[32mR$ {nota}\033[m')
+        if nota == 50:
+            nota = 20
+        elif nota == 20:
+            nota = 10
+        elif nota == 10:
+            nota = 5
+        elif nota ==5:
+            nota = 1
+        totnota = 0
+        if total == 0:
+            break
+print('='*40)
+print('{:^40}'.format('\033[33mBANCO MILLION\033[m'))
+print('='*40)
+print('{:^40}'.format('\033[32mVolte sempre !\033[m'))
