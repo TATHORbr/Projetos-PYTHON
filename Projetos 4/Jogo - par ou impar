@@ -1,0 +1,26 @@
+from random import randint
+v = 0
+while True:
+    jg1 = int(input('Escolha um numero: '))
+    computador = randint(0, 11)
+    total = jg1 + computador
+    tipo = ' '
+    while tipo not in 'IP':
+        tipo = str(input('Par ou Impar? ')).strip().upper()[0]
+    print(f'Voce jogou {jg1} o computador {computador}, a total foi {total}.' , end='' )
+    print('DEU PAR' if total % 2 == 0 else 'DEU IMPAR')
+    if tipo == 'P':
+        if total % 2 == 0:
+            print('Voce VENCEU')
+            v += 1
+        else:
+            print('Voce PERDEU!')
+            break
+    elif tipo == 'I':
+        if total % 2 == 1:
+            print('Voce VENCEU!')
+            v += 1
+        else:
+            print('Voce PERDEU!')
+    print('Vamos jogar mais...')
+print(f'Voce ganhou {v}x seguidas.')
