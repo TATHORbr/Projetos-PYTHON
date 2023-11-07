@@ -1,2 +1,41 @@
-
+n1 = int(input('Primeiro número: '))
+n2 = int(input('Segundo número: '))
+op = 0
+enquanto op! = 5:
+    imprimir('\033[36m*\033[m'*40)
+    print('''Escolha o que deseja ...
+    [1] Somar
+    [2] Multiplicador
+    [3] Maior
+    [4] Novos números
+    [5] Sair do programa''')
+    op = int(input('Qual das opções que você deseja realizar: '))
+    se op == 1:
+        n3 = n1 + n2
+        imprimir('\033[36m*\033[m' *40)
+        imprimir('A \033[33mSOMA\033[m de {} + {} = {}'.formato(n1,n2,n3))
+    elif op == 2:
+        n3 = n1 * n2
+        imprimir('\033[36m*\033[m' * 40)
+        print('A \033[33mMULTIPLICAÇÃO\033[m de {} x {} = {}'.format(n1,n2,n3))
+    operação Elif == 3:
+        se n1 > n2:
+            imprimir('\033[36m*\033[m' * 40)
+            print('{} é \033[33mMAIOR\033[m que {}'.format(n1,n2))
+        Elif n2 > n1:
+            imprimir('\033[36m*\033[m' * 40)
+            print('{} é \033[33mMAIOR\033[m que {}'.format(n2,n1))
+        Elif n1 == n2:
+            imprimir('\033[36m*\033[m' * 40)
+            print('São \033[33mIGUAIS\033[m')
+    operação Elif == 4:
+        print('Informe os números novamente.')
+        n1 = int(input('Primeiro: '))
+        n2 = int(input('Segundo: '))
+    operação Elif == 5:
+        imprimir('\033[36m*\033[m' * 40)
+        print('\033[33mFinalizando\033[m...')
+    outro:
+        imprimir('\033[36m*\033[m' * 40)
+        print('Opção \033[31mINVALIDA\033[m, tente novamente.')
 
